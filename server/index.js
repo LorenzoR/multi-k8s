@@ -48,9 +48,9 @@ app.get('/values/current', async (req, res) => {
   });
 });
 
-/*app.get('/', (req, res) => {
+app.get('/', (req, res) => {
   res.send('Hi??');
-});*/
+});
 
 app.get('/test', (req, res) => {
   res.send('Hi test');
