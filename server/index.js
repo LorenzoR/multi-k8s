@@ -48,8 +48,9 @@ app.get('/values/current', async (req, res) => {
   });
 });
 
-app.get('/', (req, res) => {
-  res.send('Hi??');
+app.use('/', function (req, res, next) {
+	res.sendStatus(200);
+	next();
 });
 
 app.get('/test', (req, res) => {
