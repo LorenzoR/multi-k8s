@@ -17,10 +17,6 @@ docker push lrodrigo/multi-worker:$SHA
 kubectl apply -f k8s
 
 # Apply latest tags
-kubectl set image deployments/server-deployment server=stephengrider/multi-server:latest
-kubectl set image deployments/client-deployment client=stephengrider/multi-client:latest
-kubectl set image deployments/worker-deployment worker=stephengrider/multi-worker:latest
-
-#kubectl set image deployments/server-deployment server=lrodrigo/multi-server:$SHA
-#kubectl set image deployments/client-deployment client=lrodrigo/multi-client:$SHA
-#kubectl set image deployments/worker-deployment worker=lrodrigo/multi-worker:$SHA
+kubectl set image deployments/server-deployment server=lrodrigo/multi-server:$SHA
+kubectl set image deployments/client-deployment client=lrodrigo/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=lrodrigo/multi-worker:$SHA
